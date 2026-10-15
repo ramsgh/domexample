@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>01 - Selecting Elements</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; background: #f0f4f8; }
+    .card { background: white; padding: 15px; border-radius: 8px; margin-bottom: 10px; border: 1px solid #ccc; }
+    .highlight { background: #e0f2fe; border-color: #0284c7; }
+  </style>
+</head>
+<body>
+  <h1 id="main-title">DOM Selection Demo</h1>
+
+  <div class="card" id="first-card">First Card (ID: first-card)</div>
+  <div class="card">Second Card (Class: card)</div>
+  <div class="card">Third Card (Class: card)</div>
+
+  <button id="btn-run">Run Selectors</button>
+
+  <div id="log" style="margin-top: 15px; font-family: monospace;"></div>
+
+  <script>
+    document.getElementById('btn-run').addEventListener('click', () => {
+      // 1. document.getElementById
+      const title = document.getElementById('main-title');
+      title.style.color = 'limegreen';
+      title.style.fontWeight = 'bold';
+      
+      // 2. document.querySelector (Selects the VERY FIRST match)
+      const firstCard = document.querySelector('.card');
+      firstCard.classList.add('highlight');
+
+
+      
+      
+
+     
+    });
+  </script>
+</body>
+</html>
